@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen'>
+    <script>
+        function result() {
+            var N = document.forms["fo"].elements["N"].value;
+            var arr= Array.from(N);
+            var result = [];
+            for(var key in arr){
+                if(arr[key] == 0){
+                    result.push(key);
+                }
+            }
+            document.writeln(result);
+    }
+    </script>
+</head>
+<body>
+  <form id="fo">
+    Введите целые числа:
+    <input type="text" id="N"><br>
+    <input type="button" onclick="result()" value="Отправить">
+  </form>
+</body>
+</html>
